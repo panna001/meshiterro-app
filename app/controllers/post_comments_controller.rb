@@ -7,6 +7,7 @@ class PostCommentsController < ApplicationController
     redirect_to post_image_path(post_image)
   end
 
+
   def destroy
     post_comment = PostComment.find_by(id: params[:id],post_image_id: params[:post_image_id])
     post_comment.destroy
